@@ -1,4 +1,4 @@
-import { Status } from "@repo/database";
+import { Status } from "@prisma/client";
 
 export class PaymentRegistryDto {
   userId: string;

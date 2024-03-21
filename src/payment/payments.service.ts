@@ -1,6 +1,5 @@
 import {
   BadRequestException,
-  ForbiddenException,
   Inject,
   Injectable,
   InternalServerErrorException,
@@ -9,8 +8,7 @@ import {
 } from "@nestjs/common";
 import { ClientKafka } from "@nestjs/microservices";
 import { PrismaService } from "@prisma/prisma.service";
-import { Role, Status } from "@repo/database";
-import type { JwtPayload } from "@auth/interfaces";
+import { Status } from "@prisma/client";
 
 import { CardCheckerResponse, PaymentRegistryResponse } from "./responses";
 import { CardCheckerDto, CreatePaymentDto, FindAllQueryDto, PaymentRegistryDto } from "./dto";

@@ -12,7 +12,7 @@ import {
   ValidationPipe,
 } from "@nestjs/common";
 import { ClientKafka } from "@nestjs/microservices";
-import { Role, Status } from "@repo/database";
+import { Role, Status } from "@prisma/client";
 
 import { RolesGuard } from "@auth/guards/role.guard";
 import { CurrentUser, Roles } from "@common/decorators";
