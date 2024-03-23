@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: backend-ms-payment-gateway
-          image: zebolhd/qa-backend-ms-payment-gateway:1.00
+          image: zebolhd/qa-backend-ms-payment-gateway:latest
           imagePullPolicy: Always
           envFrom:
             - configMapRef:
