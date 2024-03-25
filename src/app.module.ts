@@ -22,6 +22,8 @@ import { ConfigModule, ConfigService } from "@nestjs/config";
               brokers: [configService.get<string>("KAFKA_BROKER", "localhost:9092")],
             },
             consumer: {
+              heartbeatInterval: 5000,
+              rebalanceTimeout: 5000,
               groupId: "checker-consumer",
             },
           },
@@ -39,6 +41,8 @@ import { ConfigModule, ConfigService } from "@nestjs/config";
               brokers: [configService.get<string>("KAFKA_BROKER", "localhost:9092")],
             },
             consumer: {
+              heartbeatInterval: 5000,
+              rebalanceTimeout: 5000,
               groupId: "registry-consumer",
             },
           },
